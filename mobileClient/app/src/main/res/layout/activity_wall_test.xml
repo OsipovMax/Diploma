@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/container_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+    >
+
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/wall_test_tb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:contentInsetStart="0dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/WallConstraint"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/WallDescripCardView"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                        android:id="@+id/wall_descrip_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center|top"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="center" android:text="Краткое описание."
+                        android:textSize="18sp"/>
+                <TextView
+                        android:id="@+id/WallDescripTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/main_page_wall_test"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/middle_fond_sp"
+                 />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/WallCardChart"
+                    android:layout_width="0dp" android:layout_height="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="130dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+                    app:layout_constraintBottom_toBottomOf="@+id/WallDescripCardView"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                        android:id="@+id/WallChartTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="Длина стены, м"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold"/>
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/WallChartConsumptionGraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/WallProgrCardView"
+                    android:layout_width="0dp" android:layout_height="130dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:visibility="invisible" app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/WallCardChart">
+                <TextView
+                        android:id="@+id/WallPrgView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/BandPrgBar"
+                        android:layout_alignLeft="@+id/BandPrgBar"
+                        android:layout_gravity="bottom|center"
+                        android:paddingBottom="10dp"
+                        tools:layout_editor_absoluteX="156dp"
+                        tools:layout_editor_absoluteY="630dp"/>
+                <ProgressBar
+                        android:id="@+id/WallPrgBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:indeterminate="false" android:max="100"
+                        android:minWidth="200dp" android:minHeight="50dp"
+                        android:progress="0" tools:layout_editor_absoluteX="156dp"
+                        tools:layout_editor_absoluteY="369dp"/>
+                <TextView
+                        android:id="@+id/WallPbDescrip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:paddingLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/small_font_sp"
+                        android:textStyle="italic"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/WallResultCardView"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+                    app:layout_constraintBottom_toTopOf="@+id/runWallTask" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.508"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/WallCardChart">
+                <TextView
+                        android:id="@+id/WallResTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                    android:id="@+id/runWallTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorWhite"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:text="Запустить тест"
+                    android:textSize="11dp"
+                    app:layout_constraintEnd_toStartOf="@+id/aboutWallTest" app:layout_constraintHorizontal_bias="0.75"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/WallProgrCardView"/>
+            <TextView
+                    android:id="@+id/aboutWallTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/bottom_sheet_panel"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="@string/bottom_sheet_pick"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/WallProgrCardView"
+                    app:layout_constraintVertical_bias="1.0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

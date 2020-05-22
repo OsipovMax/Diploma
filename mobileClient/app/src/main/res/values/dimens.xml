@@ -1,0 +1,10 @@
+
+<resources>
+    <dimen name="small_font">10dp</dimen>
+    <dimen name="middle_font">17dp</dimen>
+
+    <dimen name="large_fond">20sp</dimen>
+    <dimen name="result_font">17sp</dimen>
+    <dimen name="middle_fond_sp">17sp</dimen>
+    <dimen name="small_font_sp">15sp</dimen>
+</resources>

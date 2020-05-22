@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:id="@+id/coordinateBottomSheet"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:context=".bottomTEST">
+
+
+    <!--   <android.support.constraint.ConstraintLayout
+               xmlns:android="http://schemas.android.com/apk/res/android"
+               xmlns:tools="http://schemas.android.com/tools"
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               xmlns:card_view="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+
+       >
+
+
+           <android.support.design.widget.AppBarLayout
+                   android:id="@+id/container_app_bar"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+           >
+
+               <android.support.v7.widget.Toolbar
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@color/colorBlueCard"
+                       app:contentInsetStart="0dp" app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                           android:id="@+id/btn_go"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="?android:attr/selectableItemBackgroundBorderless"
+                           android:paddingStart="16dp"
+                           android:paddingRight="16dp"
+                           android:src="@drawable/ic_arrow_back"
+                           android:tint="@color/colorAccent"/>
+                   <ImageView
+                           android:id="@+id/technic_ref"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="310dp"
+                           android:layout_marginEnd="10dp"
+                           android:background="?android:attr/selectableItemBackgroundBorderless"
+                           android:src="@drawable/ic_help"
+                   />
+               </android.support.v7.widget.Toolbar>
+
+           </android.support.design.widget.AppBarLayout>
+
+           <Button
+                   android:text="Запустить тест"
+                   android:layout_width="150dp"
+                   android:layout_height="50dp"
+                   android:id="@+id/button8"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:layout_marginBottom="12dp"
+                   android:onClick="startTest"
+                   android:background="@color/colorBlueCard" app:layout_constraintHorizontal_bias="0.77"/>
+           <TextView
+                   android:text="TextView"
+                   android:textStyle="italic"
+                   android:textSize="@dimen/result_font"
+                   android:layout_width="250dp"
+                   android:layout_height="130dp"
+                   android:id="@+id/textView9"
+                   android:visibility="invisible"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:layout_marginTop="200dp" app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toTopOf="@+id/button8" app:layout_constraintHorizontal_bias="0.496"
+                   app:layout_constraintVertical_bias="1.0"/>
+
+           <android.support.v7.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="129dp"
+                   android:layout_marginTop="30dp"
+                   android:layout_marginStart="16dp"
+                   android:layout_marginEnd="16dp"
+                   card_view:cardCornerRadius="25dp"
+                   app:layout_constraintTop_toBottomOf="@+id/container_app_bar" app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent" android:id="@+id/cardView5">
+               <RadioGroup
+                       android:padding="8dp"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_height="match_parent">
+                   <TextView
+                           android:text="@string/setting_test_description"
+                           android:textSize="18sp"
+                           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                           android:fontFamily="@font/roboto_light"
+                           android:textColor="@color/colorAccent"
+                           android:layout_gravity="center_horizontal"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" android:id="@+id/textView4"/>
+                   <RadioButton
+                           android:text="@string/radio_button_arithmetic_wall_test"
+                           android:layout_marginStart="16dp"
+                           android:layout_marginEnd="16dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"/>
+                   <RadioButton
+                           android:text="@string/radio_button_combination_wall_test"
+                           android:layout_marginStart="16dp"
+                           android:layout_marginEnd="16dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" android:id="@+id/radioButton" android:layout_weight="1"/>
+               </RadioGroup>
+           </android.support.v7.widget.CardView>
+
+           <android.support.design.widget.CoordinatorLayout
+                   android:id="@+id/coordinator"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:context=".WallTestActivity" tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="0dp">
+               <include layout="@layout/wall_bottom_sheet" tools:layout_editor_absoluteY="0dp"
+                        tools:layout_editor_absoluteX="0dp"/>
+           </android.support.design.widget.CoordinatorLayout>
+
+
+           <android.support.v7.widget.CardView
+                   android:id="@+id/chart"
+                   android:layout_width="372dp"
+                   android:foreground="?android:attr/selectableItemBackground"
+                   app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+                   android:layout_height="177dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                   android:layout_marginTop="30dp" app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+               <com.github.mikephil.charting.charts.HorizontalBarChart
+                       android:id="@+id/chartConsumptionGraph"
+                       android:layout_width="match_parent"
+                       android:layout_height="100dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintHorizontal_bias="0.0"
+                       app:layout_constraintTop_toBottomOf="@+id/cardView5"
+                       app:layout_constraintBottom_toTopOf="@+id/textView9" android:layout_marginTop="50dp"/>
+               <TextView
+                       android:id="@+id/tv_title_test_1"
+                       android:text="График"
+                       android:gravity="center"
+                       android:fontFamily="@font/roboto"
+                       android:textColor="@color/cardview_dark_background"
+                       android:layout_gravity="center|top"
+                       android:layout_marginBottom="8dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+           </android.support.v7.widget.CardView>
+           <FrameLayout
+                   android:id="@+id/sceneContainer"
+                   android:layout_width="match_parent"
+                   android:layout_height="406dp"
+                   app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="80dp">
+
+               <Button
+                       android:text="Button"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/showResult"
+                       app:layout_constraintTop_toBottomOf="@+id/chartConsumptionGraph"
+                       app:layout_constraintBottom_toBottomOf="@+id/textView9" app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintVertical_bias="0.62"
+                       app:layout_constraintStart_toStartOf="parent" android:visibility="visible"
+                       android:layout_gravity="bottom|center" android:onClick="ggg"/>
+           </FrameLayout>
+
+
+       </android.support.constraint.ConstraintLayout>
+
+       <include layout="@layout/wall_bottom_sheet" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

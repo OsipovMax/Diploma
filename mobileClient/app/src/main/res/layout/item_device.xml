@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_rating_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="@color/colorBlack"
+            android:textSize="36sp"
+            android:paddingStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002" tools:text="100"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="62dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/barrier" />
+
+    <com.example.maapp.presentation.ui.indicator.IndicatorRatingView
+            android:id="@+id/test_result_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginBottom="10dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rating_place"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBlueDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/test_result_indicator"
+            app:layout_constraintEnd_toStartOf="@id/tv_test_result"
+            app:layout_constraintStart_toStartOf="@+id/test_result_indicator" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.65"
+            tools:text="Nokia 6.1"/>
+
+    <TextView
+            android:id="@+id/tv_test_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            tools:text="89099999"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_rating_place" />
+</androidx.constraintlayout.widget.ConstraintLayout>

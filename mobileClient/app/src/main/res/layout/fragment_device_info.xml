@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/container_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_device_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/big_div1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#FCFAFA"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <TextView
+                    android:id="@+id/label_basic_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Базовая информация об устройстве"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/big_div1"/>
+
+            <TextView
+                    android:id="@+id/label_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Производитель"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_basic_info"/>
+
+            <TextView
+                android:id="@+id/tv_brand"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/label_basic_info"
+                tools:text="Nokia"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/small_div1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_brand"
+                android:layout_marginTop="10dp"
+                android:background="#FCFAFA"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                    android:id="@+id/label_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Модель"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/small_div1"/>
+            <TextView
+                android:id="@+id/tv_model"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/small_div1"
+                tools:text="Nokia"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/small_div2"
+                app:layout_constraintTop_toBottomOf="@id/label_model"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="#FCFAFA"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                    android:id="@+id/label_os"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="ОС"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/small_div2"/>
+            <TextView
+                android:id="@+id/tv_os"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/small_div2"
+                tools:text="Nokia"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/small_div3"
+                app:layout_constraintTop_toBottomOf="@id/label_os"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="#FCFAFA"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                    android:id="@+id/label_cpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Центральный процессор"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/small_div3"/>
+            <TextView
+                android:id="@+id/tv_cpu"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/small_div3"
+                tools:text="Nokia"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/big_div2"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/label_cpu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#FCFAFA"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <TextView
+                    android:id="@+id/label_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Память"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/big_div2"/>
+
+            <TextView
+                    android:id="@+id/label_ram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Оперативная память"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_storage"/>
+
+            <TextView
+                android:id="@+id/tv_ram"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/label_storage"
+                tools:text="2000"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/small_div4"
+                app:layout_constraintTop_toBottomOf="@id/label_ram"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="#FCFAFA"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--        <TextView-->
+        <!--                android:id="@+id/tv_info"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content" />-->
+    </ScrollView>
+
+</LinearLayout>

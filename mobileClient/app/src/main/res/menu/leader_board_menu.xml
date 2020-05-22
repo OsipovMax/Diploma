@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/lb_menu_title"
+          android:icon="@drawable/test_mode"
+          app:showAsAction="ifRoom"
+          android:title="Список тестов">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/processor_mode"
+                      android:title="@string/radio_button_arithmetic_wall_test"
+                />
+                <item android:id="@+id/memory_mode"
+                      android:title="@string/radio_button_combination_wall_test"
+                />
+            </group>
+        </menu>
+    </item>
+
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/wall"
+              android:title="@string/wall_test"
+              app:showAsAction="never"
+        />
+        <item android:id="@+id/bandwidth"
+              android:title="@string/bandwidth_test"
+              app:showAsAction="never"
+        />
+        <item android:id="@+id/search"
+              android:title="@string/search_test"
+              app:showAsAction="never"
+        />
+
+    </group>
+
+
+    <!--
+
+    <item android:id="@+id/wall"
+          android:title="@string/wall_test"
+          app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item android:id="@+id/proc_sub_item_wall"
+                  android:title="@string/radio_button_arithmetic_wall_test" />
+            <item android:id="@+id/mem_sub_item_wall"
+                  android:title="@string/radio_button_combination_wall_test" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/bandwidth"
+          android:title="@string/bandwidth_test"
+          app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/proc_sub_item_band"
+                      android:title="@string/radio_button_arithmetic_wall_test" />
+                <item android:id="@+id/mem_sub_item_band"
+                      android:title="@string/radio_button_combination_wall_test" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/search"
+          android:title="@string/search_test"
+          app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/proc_sub_item_search"
+                      android:title="@string/radio_button_arithmetic_wall_test" />
+                <item android:id="@+id/mem_sub_item_search"
+                      android:title="@string/radio_button_combination_wall_test" />
+            </group>
+        </menu>
+    </item>
+    -->
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            card_view:cardCornerRadius="7dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <TextView
+                    android:id="@+id/pos_text_view"
+                    style="@style/word_title"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    tools:text="1"
+                    android:gravity="center"
+            />
+            <TextView
+                    android:id="@+id/dev_text_view"
+                    style="@style/word_title"
+                    tools:text="Nokia"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+            />
+
+            <TextView
+                    android:id="@+id/res_text_view"
+                    style="@style/word_title"
+                    tools:text="35000"
+                    android:layout_weight="1.3"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

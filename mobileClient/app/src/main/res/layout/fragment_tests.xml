@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/container_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:contentInsetStart="0dp"
+        >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/cardview_dark_background"
+                    android:text="Тесты сравнения устройств"
+                    android:textSize="22sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:fontFamily="@font/roboto_light"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/btn_test_1"
+            android:layout_width="150dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_app_bar"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_test_3" app:layout_constraintVertical_bias="0.51">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="195dp"
+                android:src="@drawable/ic_great_wall_of_china"/>
+        <TextView
+                android:id="@+id/tv_title_test_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="«Китайская стена»"
+                android:textColor="@color/cardview_dark_background"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/btn_test_2"
+            android:layout_width="150dp"
+            app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+            android:layout_height="200dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_app_bar"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/guideline" android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/btn_test_3"
+    >
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="180dp"
+                android:src="@drawable/ic_car"/>
+        <TextView
+                android:id="@+id/tv_title_test_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="«Пропускная способность»"
+                android:textColor="@color/cardview_dark_background"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/btn_test_3"
+            android:layout_width="150dp"
+            app:cardCornerRadius="@dimen/bottom_navigation_elevation"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/btn_test_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="180dp"
+                android:src="@drawable/ic_find"/>
+        <TextView
+                android:id="@+id/tv_title_test_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="«Поиск»"
+                android:textColor="@color/cardview_dark_background"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

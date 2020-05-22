@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/bottom_sheet"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              app:behavior_hideable="true"
+              app:behavior_peekHeight="75dp"
+              app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" android:visibility="visible">
+
+    <!--<TextView
+            android:layout_width="100dp"
+            android:layout_height="73dp"
+            android:background="@drawable/bottom_sheet_panel"
+            android:layout_gravity="right|bottom"
+            android:gravity="center"
+            android:text="@string/bottom_sheet_pick"
+            android:textColor="@android:color/white"
+            />
+            -->
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text="@string/wall_test"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/large_fond"
+                android:padding="10dp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleTest"/>
+        <ScrollView
+                android:id="@+id/description_scrol_view"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView
+                        android:id="@+id/descriptionTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:padding="10dp"
+                        android:text="@string/bottom_sheet_title"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/middle_fond_sp"
+                        android:textStyle="bold|italic"/>
+                <TextView
+                        android:id="@+id/low_sheet_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:justificationMode="inter_word"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="@string/bottom_wall_sheet_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/small_font_sp"
+                        android:textStyle="italic"/>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView
+                android:id="@+id/tech_scroll_description"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView
+                        android:id="@+id/technicalDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:padding="10dp"
+                        android:text="@string/wall_test_tech_topic"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/middle_fond_sp"
+                        android:textStyle="bold|italic"/>
+                <TextView
+                        android:id="@+id/low_sheet_content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="left|center"
+                        android:justificationMode="inter_word"
+                        android:padding="10dp"
+                        android:text="@string/technical_description"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/small_font_sp"
+                        android:textStyle="italic"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

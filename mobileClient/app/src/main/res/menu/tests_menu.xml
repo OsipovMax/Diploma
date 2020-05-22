@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/ttl"
+          android:title="Режим тестирования"
+          android:enabled="false"
+          app:showAsAction="never"
+    />
+
+    <group android:checkableBehavior="single">
+
+    <item android:id="@+id/proc"
+          android:title="@string/radio_button_arithmetic_wall_test"
+          app:showAsAction="never"
+    />
+    <item android:id="@+id/mem"
+          android:title="@string/radio_button_combination_wall_test"
+          app:showAsAction="never"
+    />
+    </group>
+</menu>
