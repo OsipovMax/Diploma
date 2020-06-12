@@ -53,7 +53,13 @@ func inputDataValidation(testName string, testMode string) bool {
 }
 
 func executeTest(testName string, testMode string) string {
-	out, _ := exec.Command(testName+".exe", testMode).Output()
+	var flag string
+	if testMode == "Proc" {
+		flag = "-p"
+	} else {
+		flag = "-m"
+	}
+	out, _ := exec.Command(testName+".exe", flag).Output()
 	return string(out)
 }
 
@@ -90,7 +96,8 @@ func main() {
 	devRecord.DeviceInformation = &devInform
 	devRecord.DeviceTitle = manufacter + " " + model
 	devRecord.Result, _ = strconv.ParseFloat(executeTest(testName, testMode), 64)
+	fmt.Println(devRecord.Result)
 	var record []byte
 	record, _ = json.Marshal(devRecord)
-	client.Post("http://192.168.0.43:8000/"+testName+"/"+testMode, "application/json", bytes.NewBuffer(record))
+	client.Post("http://team2010.parallel.ru:12333/"+testName+"/"+testMode, "application/json", bytes.NewBuffer(record))
 }
